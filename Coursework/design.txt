@@ -1,0 +1,1 @@
+module SQRT_Calculator (    input CLK,    input [9:0] X,    output reg [4:0] Y);  reg [10:0] A,B,Q;    always @(negedge CLK) begin    A = X;    Q = 1;    B = 3;    while (Q <= A) begin      Q = Q + B;      B = B + 2;    end    B = B >> 1;    Y = B - 1;  endendmodule

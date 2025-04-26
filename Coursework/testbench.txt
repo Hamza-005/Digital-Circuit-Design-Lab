@@ -1,0 +1,31 @@
+module SQRT_Calculator_tb();
+
+  reg CLK;
+  reg [9:0] X;
+  wire [4:0] Y;
+
+  SQRT_Calculator UUT (.CLK(CLK),.X(X),.Y(Y));
+
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars();
+    
+     for (int i = 0; i <= 1023; i++) 
+       begin
+         X=i;
+         CLK=0;
+         #1 ; CLK=1;
+         #1 ; CLK=0;
+         #1 ; CLK=1;
+         #1 ; CLK=0;
+         CLK=1;
+       end
+  end
+  
+  initial begin
+    $monitor("X = %d, Y = %d",X,Y);
+  end
+  
+endmodule
+
+
