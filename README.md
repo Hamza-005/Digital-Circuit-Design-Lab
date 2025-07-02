@@ -1,0 +1,6 @@
+EXP 2 adders (VHDL)
+EXP 3 Counters (verilog)
+EXP 4 ASM 4 bit binary divider using repeated subtraction(VHDL)
+EXP 5 LCD (VHDL)
+EXP 6 IP (this one is usually just copy and pasting from the manual)
+EXP 8 VGAController (verilog)
